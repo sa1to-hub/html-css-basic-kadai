@@ -2,8 +2,7 @@
 #top {
   width: 800px;                 /* 横幅 800px */
   background: #dcc9f4;          /* 背景色 */
-  padding: 20px 0;            /* 上下に20pxの余白を入れる */
-  margin: 0 auto;               /* 画面中央に配置（左右中央寄せ） */
+  margin: 20px auto;               /* 画面中央に配置（左右中央寄せ） */
   text-align: center;         /* テキストを中央寄せ */
 }
 
