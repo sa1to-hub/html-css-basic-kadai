@@ -1,0 +1,105 @@
+/* ===== Step3. スタイルの下準備 ===== */
+h1, p, body {
+  margin: 0;
+}
+
+p, a {
+  font-size: 20px;
+}
+
+
+/* ===== Step4. header部分のスタイル ===== */
+header {
+  margin-bottom: 20px;
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+}
+
+header h1 {
+  color: rgb(255, 255, 255);
+}
+
+
+/* ===== Step5. main部分のスタイル ===== */
+main {
+  margin: 10px;
+}
+
+/* 親要素（Flexbox） */
+#parent {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* 子要素（枠のスタイル） */
+.contents {
+  border: solid 3px rgb(238, 204, 204);
+  flex-basis: 25%;
+  margin: 20px 0px;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+/* class="contents" 内の h2設定 */
+.contents h2 {
+  font-size: 25px;
+  border-bottom: dotted 3px rgb(236, 122, 122);
+}
+
+/* h2の前に丸「●」を表示 */
+.contents h2::before {
+  content: "●";
+  color: rgb(239, 111, 139);
+}
+
+/* class="contents" 内の img設定 */
+.contents img {
+  margin: 10px 0;
+  width: 70%;
+}
+
+/* class="contents" の2番目のp要素の中の最初の文字 */
+.contents p:nth-of-type(2)::first-letter {
+  font-weight: bold;
+  color: rgb(97, 206, 249);
+}
+
+/* ===============================
+   Step6. フッター部分のスタイル
+================================ */
+footer {
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+}
+
+footer a {
+  color: rgb(255, 255, 255);
+}
+
+/* 訪問済みリンク */
+footer a:visited {
+  color: rgb(193, 234, 251);
+}
+
+/* マウスが乗ったとき */
+footer a:hover {
+  color: rgb(245, 178, 168);
+}
+
+
+/* ===============================
+   Step7. レスポンシブ対応
+================================ */
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 25px;
+  }
+
+  #parent {
+    flex-direction: column;
+  }
+}
